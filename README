@@ -1,0 +1,6 @@
+A Guacamole stack with built in RDP and SSH connections.
+
+## Running
+docker-compose up
+
+Go to http://localhost:8080/guacamole and use credentials guac/guac
