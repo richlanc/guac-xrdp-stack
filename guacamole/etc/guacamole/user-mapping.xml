@@ -1,0 +1,34 @@
+<user-mapping>
+    <authorize 
+            username="guac"
+            password="eea12969e4f22fdb3f0bf98e632e8ec2"
+            encoding="md5">
+
+        <connection name="ssh">
+            <protocol>ssh</protocol>
+            <param name="hostname">xrdp</param>
+            <param name="port">22</param>
+            <param name="username">ubuntu</param>
+            <param name="password">ubuntu</param>
+        </connection>
+
+        <connection name="rdp">
+            <protocol>rdp</protocol>
+            <param name="hostname">xrdp</param>
+            <param name="port">3389</param>
+            <!-- <param name="username">ubuntu</param> -->
+            <!-- <param name="password">ubuntu</param> -->
+            <param name="username">ubuntu</param>
+            <param name="password">ubuntu</param>
+            <param name="security">any</param>
+            <param name="ignore-cert">true</param>
+
+            <param name="resize-method">reconnect</param>
+
+            <param name="enable-drive">true</param>
+            <param name="drive-name">remote_drive</param>
+            <param name="drive-path">/files</param>
+            <param name="create-drive-path">true</param>
+        </connection>
+    </authorize>
+</user-mapping>

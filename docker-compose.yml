@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  guacamole:
+    build:
+      context: guacamole
+    ports:
+      - "8080:8080"
+  guacd:
+    image: guacamole/guacd
+    cap_add: 
+      - SYS_PTRACE
+    ports:
+      - "4822"
+    environment:
+      - GUACD_LOG_LEVEL=debug
+  xrdp:
+    image: danielguerra/ubuntu-xrdp
+    container_name: xrdp
+    ports:
+      - "22"
+      - "3389"
+    # Required for libfuse/file transfer
+    privileged: true
